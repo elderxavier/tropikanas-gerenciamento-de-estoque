@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <stockmanager_adminhtml_stockmanager_index>
+        <reference name="content">
+            <block type="stockmanager/adminhtml_stockmanager" name="stockmanager" />
+        </reference>
+    </stockmanager_adminhtml_stockmanager_index>
+</layout>
