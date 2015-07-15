@@ -4,7 +4,30 @@
         <ElderXavier_Stockmanager>
             <version>0.1.0</version>
         </ElderXavier_Stockmanager>
-    </modules>    
+    </modules>           
+    <global>                        
+        <helpers>
+            <stockmanager>
+                <class>ElderXavier_Stockmanager_Helper</class>
+            </stockmanager>
+        </helpers>
+        <models>
+            <stockmanager>
+                <class>ElderXavier_Stockmanager_Model</class>                
+            </stockmanager>
+        </models>
+        <events>                
+            <order_cancel_after>
+                <observers>
+                    <stockmanager_order_cancel_observer>
+                        <class>stockmanager/observer</class>
+                        <method>custom_sales_order_cancel</method>
+                    </stockmanager_order_cancel_observer>
+                </observers>
+            </order_cancel_after>                
+            </events>
+    </global>
+    <!--
     <admin>
         <routers>
             <stockmanager>
@@ -45,6 +68,7 @@
                 </admin>
             </resources>   
         </acl>
+
         <layout>
             <updates>
                 <stockmanager>
@@ -52,12 +76,6 @@
                 </stockmanager>
             </updates>
         </layout>
-    </adminhtml>   
-    <global>                        
-        <helpers>
-            <stockmanager>
-                <class>ElderXavier_Stockmanager_Helper</class>
-            </stockmanager>
-        </helpers>
-    </global>
+    </adminhtml>
+    -->
 </config>
